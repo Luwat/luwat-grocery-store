@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luwat Grocery Store</title>
 </head>
+
 <body>
-    
+    <h1>Luwat Grocery Store</h1>
+    <% items.forEach((item)=> { %>
+        <div>
+            <p>
+                <%= item.name %>
+            </p>
+            <p>
+                <%= item.description %>
+            </p>
+            <p>
+                <%= item.price %>
+            </p>
+            <p>
+                <%= item.quantity %>
+            </p>
+            <% categories.find((category)=> { %>
+                <% if (category.id===item.category_id) { %>
+                    <p>
+                        <%= category.name %>
+                    </p>
+                    <% } %>
+                        <% }) %>
+        </div>
+        <% }) %>
+            <p><a href="/item/new">Add Item</a></p>
+            <p><a href="/category/new">Add Category</a></p>
 </body>
+
 </html>

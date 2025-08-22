@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Item</title>
+</head>
+
+<body>
+    <h1>Create Item</h1>
+    <form action="/category/new" method="POST">
+        <div>
+            <label for="name">Enter category name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="description">Enter category description:</label>
+            <input type="text" id="description" name="description">
+        </div>
+        <button type="submit">Create Category</button>
+    </form>
+</body>
+
+</html>
